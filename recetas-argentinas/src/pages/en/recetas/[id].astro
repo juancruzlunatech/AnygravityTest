@@ -1,8 +1,8 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { recipes } from '../../data/recipes';
+import Layout from '../../../layouts/Layout.astro';
+import { recipes } from '../../../data/recipes';
 
-// Generar rutas dinámicas para cada receta usando el `id` de /data/recipes.ts
+// Generate dynamic routes for en locale
 export function getStaticPaths() {
     return recipes.map(recipe => ({
         params: { id: recipe.id },
@@ -11,12 +11,12 @@ export function getStaticPaths() {
 }
 
 const { recipe } = Astro.props;
-const data = recipe.es;
+const data = recipe.en;
 ---
 
-<Layout title={`${data.title} | Sabor Argentino`} lang="es">
+<Layout title={`${data.title} | Argentine Flavor`} lang="en">
     <article class="recipe-detail">
-        <a href="/" class="back-link">← Volver a recetas</a>
+        <a href="/en" class="back-link">← Back to recipes</a>
         
         <header class="detail-hero">
             <div class="image-container">
@@ -35,7 +35,7 @@ const data = recipe.es;
 
         <section class="recipe-body">
             <div class="ingredients">
-                <h2>Ingredientes</h2>
+                <h2>Ingredients</h2>
                 <ul>
                     {data.ingredients.map((ingredient: string) => (
                         <li>{ingredient}</li>
@@ -44,7 +44,7 @@ const data = recipe.es;
             </div>
 
             <div class="instructions">
-                <h2>Preparación</h2>
+                <h2>Preparation</h2>
                 <ol>
                     {data.steps.map((step: string) => (
                         <li>{step}</li>

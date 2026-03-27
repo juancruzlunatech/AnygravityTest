@@ -1,31 +1,30 @@
 ---
 interface Props {
-    id: string;
-	title: string;
-	description: string;
-	image: string;
-	time: string;
-	difficulty: string;
+    recipe: any;
+    lang?: 'es' | 'en';
 }
 
-const { id, title, description, image, time, difficulty } = Astro.props;
+const { recipe, lang = 'es' } = Astro.props;
+const data = recipe[lang];
+const link = lang === 'en' ? `/en/recetas/${recipe.id}` : `/recetas/${recipe.id}`;
+const actionText = lang === 'en' ? 'View full recipe &rarr;' : 'Ver receta completa &rarr;';
 ---
 
 <article class="recipe-card">
-	<a href={`/recetas/${id}`} class="card-link">
+	<a href={link} class="card-link">
 		<div class="image-wrapper">
-			<img src={image} alt={title} loading="lazy" transition:name={`img-${id}`} />
+			<img src={recipe.image} alt={data.title} loading="lazy" transition:name={`img-${recipe.id}`} />
 		</div>
 		<div class="content">
-			<h3 transition:name={`title-${id}`}>{title}</h3>
-			<p>{description}</p>
+			<h3 transition:name={`title-${recipe.id}`}>{data.title}</h3>
+			<p>{data.description}</p>
 			<div class="meta">
-				<span>⏱ {time}</span>
-				<span>🔥 {difficulty}</span>
+				<span>⏱ {data.time}</span>
+				<span>🔥 {data.difficulty}</span>
 			</div>
 			
 			<div class="action-btn">
-			    Ver receta completa &rarr;
+			    {actionText}
 			</div>
 		</div>
 	</a>

@@ -1,13 +1,14 @@
 ---
 interface Props {
 	title: string;
+    lang?: 'es' | 'en';
 }
 
-const { title } = Astro.props;
+const { title, lang = 'es' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -20,6 +21,12 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+        <nav class="top-nav">
+            <div class="lang-switch">
+                <a href={Astro.url.pathname.replace(/^\/en/, '') || '/'} class={lang === 'es' ? 'active' : ''}>🇪🇸 ES</a>
+                <a href={lang === 'en' ? Astro.url.pathname : `/en${Astro.url.pathname}`} class={lang === 'en' ? 'active' : ''}>🇺🇸 EN</a>
+            </div>
+        </nav>
 		<slot />
 	</body>
 </html>
@@ -50,4 +57,35 @@ const { title } = Astro.props;
 	html {
 		scroll-behavior: smooth;
 	}
+    
+    .top-nav {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1.5rem 2.5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 50;
+    }
+    .lang-switch {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .lang-switch a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.5rem;
+        opacity: 0.4;
+        transition: 0.3s;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    .lang-switch a.active, .lang-switch a:hover {
+        opacity: 1;
+        color: var(--secondary);
+    }
 </style>

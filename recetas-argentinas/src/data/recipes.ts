@@ -1,101 +1,202 @@
 export const recipes = [
 	{
-		id: 'empanadas-tucumanas',
-		title: 'Empanadas Tucumanas',
-		description: 'Las auténticas empanadas cortadas a cuchillo. Jugosas, hechas con matambre de vaca, pasas de uva, huevo duro y aceitunas. Un manjar del norte argentino.',
+		id: 'empanadas',
 		image: '/empanadas_tucumanas.png',
-		time: '1h 30m',
-		difficulty: 'Media',
-		ingredients: [
-			'1 kg de matambre de vaca',
-			'1 kg de cebolla blanca picada final',
-			'200g de grasa pella',
-			'6 huevos duros picados',
-			'Aceitunas verdes y pasas de uva (opcional pero clásico)',
-			'Pimentón dulce, comino y ají molido a gusto',
-			'Tapas para empanadas criollas (hojaldradas o al horno)'
-		],
-		steps: [
-			'Hervir el matambre con sal gorda durante unos 40 minutos para que ablande un poco. Dejar enfriar y cortar a cuchillo en dados pequeños.',
-			'En olla de hierro, rehogar la cebolla picada fina con la grasa pella. Una vez transparente, añadir la carne picada y cocinar unos minutos. Condimentar con pimentón, comino y ají.',
-			'Fuera del fuego y una vez frío el relleno, agregar los huevos picados, pasas de uva y aceitunas descarozadas.',
-			'Colocar cucharadas generosas de relleno en cada disco, humedecer el borde y realizar 13 repulgues.',
-			'Hornear a máxima temperatura (ideal horno de barro) hasta que estén doradas o freírlas en grasa para el sabor más clásico.'
-		]
+		es: {
+			title: 'Empanadas Tucumanas',
+			description: 'Las auténticas empanadas cortadas a cuchillo. Jugosas, hechas con matambre de vaca, pasas de uva, huevo duro y aceitunas.',
+			time: '1h 30m',
+			difficulty: 'Media',
+			ingredients: ['1 kg de matambre de vaca', '1 kg de cebolla blanca', '200g de grasa pella', '6 huevos duros', 'Tapas para empanadas criollas'],
+			steps: ['Hervir matambre.', 'Rehogar cebolla y mezclar carne.', 'Agregar huevo.', 'Rellenar tapas.', 'Hornear.']
+		},
+		en: {
+			title: 'Tucuman Empanadas',
+			description: 'Authentic hand-cut meat empanadas. Juicy, made with flank steak, raisins, hard-boiled egg and olives.',
+			time: '1h 30m',
+			difficulty: 'Medium',
+			ingredients: ['1 kg beef flank', '1 kg white onion', '200g beef fat', '6 hard-boiled eggs', 'Empanada dough discs'],
+			steps: ['Boil steak.', 'Sauté onion and mix meat.', 'Add egg.', 'Fill dough.', 'Bake.']
+		}
 	},
 	{
-		id: 'asado-tradicional',
-		title: 'Asado Tradicional',
-		description: 'El clásico domingo argentino. Costillar, vacío, tira de asado y achuras cocinadas lentamente al fuego de leña. Acompañado de un buen chimichurri.',
+		id: 'asado',
 		image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800',
-		time: '3h',
-		difficulty: 'Alta',
-		ingredients: [
-			'1 Tira de asado gruesa',
-			'1 Vacío completo (aprox. 1.5 kg)',
-			'Chorizos bombón y morcillas',
-			'Sal gruesa o parrillera',
-			'Carbón vegetal o leña dura (quebracho/espinillo)',
-			'Chimichurri listo (aceite, vinagre, ajo, perejil, ají)'
-		],
-		steps: [
-			'Encender un buen fuego en un rincón de la parrilla y esperar hasta formar brasa rojas bien encendidas, sin humo negro.',
-			'Salar la toda la carne por ambas caras utilizando sal semigruesa o parrillera.',
-			'Colocar los cortes gordos primero (Vacío) del lado de las membranas hacia la parrilla. Esparcir la brasa por debajo logrando un calor moderado-alto (aguantar el calor 7 segundos con la palma).',
-			'Cocinar a fuego lento durante 1 hora y media a 2 horas del primer lado para las piezas gruesas.',
-			'Girar la carne justo cuando la parte superior de los cortes comience a transpirar jugo. Tirar los chorizos y asar por 45 min extra. Servir caliente cortando siempre en tabla de madera.'
-		]
+		es: {
+			title: 'Asado Tradicional',
+			description: 'El clásico domingo argentino. Costillar, vacío, tira de asado y achuras cocinadas lentamente al fuego de leña. Acompañado de un buen chimichurri.',
+			time: '3h',
+			difficulty: 'Alta',
+			ingredients: ['Tira de asado', 'Vacío', 'Chorizos', 'Sal gruesa', 'Leña o Carbón', 'Chimichurri'],
+			steps: ['Encender fuego.', 'Salar carne.', 'Asar a fuego lento.', 'Girar cuando transpire.', 'Servir en tabla.']
+		},
+		en: {
+			title: 'Traditional Asado',
+			description: 'The classic Argentine Sunday BBQ. Slowly grilled ribs, flank steak and sausages over wood fire. Served with chimichurri.',
+			time: '3h',
+			difficulty: 'High',
+			ingredients: ['Short ribs', 'Flank steak', 'Sausages', 'Coarse salt', 'Wood or Charcoal', 'Chimichurri'],
+			steps: ['Light fire.', 'Salt meat.', 'Grill slowly.', 'Turn when juices appear.', 'Serve on wooden board.']
+		}
 	},
 	{
-		id: 'alfajores-de-maicena',
-		title: 'Alfajores de Maicena',
-		description: 'Suaves tapas de maicena rellenas de abundante dulce de leche y rodeadas de coco rallado. El acompañamiento perfecto para el mate.',
+		id: 'alfajores',
 		image: '/alfajores_de_maicena.png',
-		time: '1h',
-		difficulty: 'Baja',
-		ingredients: [
-			'200g de harina de trigo 0000',
-			'300g de fécula de maíz (maicena)',
-			'2 cdta. de polvo de hornear y 1/2 cdta. de bicarbonato',
-			'200g de manteca blanda (pomada)',
-			'150g de azúcar impalpable',
-			'3 yemas de huevo grandes',
-			'1 cdta. esencia de vainilla y ralladura de 1 limón',
-			'Dulce de leche estilo repostero',
-			'Coco rallado para el borde'
-		],
-		steps: [
-			'Tamizar en un bol la harina, la maicena, el polvo para hornear y el bicarbonato.',
-			'En otro recipiente, batir la manteca blanda con el azúcar hasta que quede cremosa. Incorporar luego las yemas de una en una, la esencia y la ralladura de limón.',
-			'Añadir los ingredientes secos a la mezcla húmeda e integrar con cornet o manos frías sin amasar demasiado, solo hasta formar el bollo.',
-			'Dejar descansar la masa envuelta en papel film en la heladera durante unos 30 minutos.',
-			'Estirar la masa (1/2 cm de grosor), cortar discos (tapas) y ubicarlos en asadera. Hornear a 180°C (horno medio) por 10 a 12 minutos (deben quedar blanquitas por encima y apenitas doradas abajo).',
-			'Una vez frías las tapas, untar generosamente el dulce de leche repostero y tapar sin apretar mucho. Rodar el borde en un bolllito con coco rallado.'
-		]
+		es: {
+			title: 'Alfajores de Maicena',
+			description: 'Suaves tapas de maicena rellenas de abundante dulce de leche y rodeadas de coco rallado. El acompañamiento perfecto para el mate.',
+			time: '1h',
+			difficulty: 'Baja',
+			ingredients: ['200g harina', '300g maicena', '200g manteca', '150g azúcar impalpable', 'Dulce de leche repostero', 'Coco picado'],
+			steps: ['Mezclar secos', 'Cremar manteca y azúcar', 'Unir sin amasar', 'Hornear discos', 'Unir con dulce de leche y coco']
+		},
+		en: {
+			title: 'Cornstarch Alfajores',
+			description: 'Soft cornstarch cookies filled with thick dulce de leche and rolled in shredded coconut. Perfect with mate.',
+			time: '1h',
+			difficulty: 'Low',
+			ingredients: ['200g flour', '300g cornstarch', '200g butter', '150g powdered sugar', 'Baking dulce de leche', 'Shredded coconut'],
+			steps: ['Mix dry ingredients', 'Cream butter and sugar', 'Combine gently', 'Bake discs', 'Fill with dulce de leche and add coconut']
+		}
 	},
 	{
-		id: 'milanesa-a-la-napolitana',
-		title: 'Milanesa a la Napolitana',
-		description: 'La leyenda de Buenos Aires. Milanesa de carne empanizada al horno, cubierta con salsa de tomate, jamón, queso derritido y orégano. Servida con papas fritas.',
+		id: 'milanesa',
 		image: 'https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&q=80&w=800',
-		time: '45m',
-		difficulty: 'Baja',
-		ingredients: [
-			'4 fetas de nalga, peceto o bola de lomo de vaca feteadas finas',
-			'3 huevos frescos',
-			'2 Dientes de ajo y Perejil picado a gusto',
-			'Pan rallado c/n (mejor mezcla casero con industrial)',
-			'Salsa de tomate tipo pomodoro (1 taza)',
-			'150g de jamón cocido en fetas',
-			'200g de queso muzzarella o queso cremoso',
-			'Orégano y sal a gusto. Aceite de girasol para freír'
-		],
-		steps: [
-			'Retirar nervios o bordes de las fetas de carne. Batir intensamente los huevos en un plato hondo incorporando sal, pimienta, ajo y abundante perejil picado.',
-			'Sumergir cada disco de carne en el ligue y luego empanarlos sobre el pan rallado generosamente, apretando con los dedos y la palma para que pegue muy bien (esto es clave para el rebozado).',
-			'Freír las milanesas a fuego fuerte hasta apenas dorarlas (o hacerlas al horno para versión liviana). Retirarlas y escurrir en servilletas.',
-			'Acomodar las milanesas doradas en asadera, poner encima a cada una dos cucharaditas esparcidas de la salsa de tomate, una feta generosa de jamón y coronar con unas buenas tiras gruesas de queso mozzarella.',
-			'Introducir la bandeja al horno al máximo (250°C) durante unos 5 minutos solo para derretir (y quizás gratinar) el queso. Al salir, espolvorearles orégano. Servir junto a unas muy buenas papas fritas a bastón.'
-		]
+		es: {
+			title: 'Milanesa a la Napolitana',
+			description: 'La leyenda de Buenos Aires. Milanesa de carne empanizada al horno, cubierta con salsa de tomate, jamón, queso derritido y orégano.',
+			time: '45m',
+			difficulty: 'Baja',
+			ingredients: ['Nalga de vaca fina', 'Huevos, ajo, perejil', 'Pan rallado', 'Salsa de tomate', 'Jamón cocido', 'Muzzarella'],
+			steps: ['Batir huevos con ajo.', 'Empanar carne.', 'Freír o hornear.', 'Cubrir con salsa, jamón y queso.', 'Gratinar 5 min.']
+		},
+		en: {
+			title: 'Napolitan Milanesa',
+			description: 'The Buenos Aires legend. Breaded beef steak topped with tomato sauce, ham, melted mozzarella cheese and oregano.',
+			time: '45m',
+			difficulty: 'Low',
+			ingredients: ['Thin beef steaks', 'Eggs, garlic, parsley', 'Breadcrumbs', 'Tomato sauce', 'Cooked ham', 'Mozzarella cheese'],
+			steps: ['Beat eggs with garlic.', 'Bread the steaks.', 'Fry or bake.', 'Top with sauce, ham, and cheese.', 'Broil for 5 mins.']
+		}
+	},
+	{
+		id: 'locro',
+		image: '/locro.png',
+		es: {
+			title: 'Locro Patrio',
+			description: 'Un guiso espeso perfecto para fechas patrias. Hecho a base de maíz blanco, porotos, zapallo y diferentes cortes de carne de cerdo y vaca.',
+			time: '4h',
+			difficulty: 'Alta',
+			ingredients: ['Maíz blanco pisado', 'Porotos pallares', 'Zapallo plomo', 'Pechito de cerdo', 'Chorizo colorado', 'Panceta'],
+			steps: ['Remojar maíz y porotos.', 'Hervir despacio legumbres y verduras.', 'Agregar carnes.', 'Ligar con zapallo.', 'Servir con salsa picante.']
+		},
+		en: {
+			title: 'Traditional Locro',
+			description: 'A thick, hearty stew perfect for national holidays. Made with white corn, beans, squash, and various cuts of pork and beef.',
+			time: '4h',
+			difficulty: 'High',
+			ingredients: ['Hominy white corn', 'Lima beans', 'Squash', 'Pork ribs', 'Spanish chorizo', 'Bacon'],
+			steps: ['Soak corn and beans.', 'Slow boil legumes and veggies.', 'Add meats.', 'Thicken with squash.', 'Serve with hot sauce.']
+		}
+	},
+	{
+		id: 'choripan',
+		image: '/choripan.png',
+		es: {
+			title: 'Choripán Argentino',
+			description: 'Sándwich glorioso de chorizo a la parrilla dentro de un pan francés crujiente, rebosado en salsa chimichurri.',
+			time: '30m',
+			difficulty: 'Muy Baja',
+			ingredients: ['Chorizos de puro cerdo', 'Pan flauta o francés', 'Chimichurri fresco', 'Salsa criolla (opcional)'],
+			steps: ['Asar los chorizos a la parrilla o plancha.', 'Cortar en formato mariposa al final.', 'Tostar el pan.', 'Agregar abundante chimichurri.', 'Cerrar y disfrutar.']
+		},
+		en: {
+			title: 'Argentine Choripan',
+			description: 'Glorious grilled sausage sandwich inside crusty French bread, overflowing with fresh chimichurri sauce.',
+			time: '30m',
+			difficulty: 'Very Low',
+			ingredients: ['Pure pork sausages', 'French baguette bread', 'Fresh chimichurri', 'Criolla sauce (optional)'],
+			steps: ['Grill sausages on BBQ.', 'Butterfly cut them at the end.', 'Toast the bread.', 'Add plenty of chimichurri.', 'Close and enjoy.']
+		}
+	},
+	{
+		id: 'flan',
+		image: '/flan_mixto.png',
+		es: {
+			title: 'Flan Mixto',
+			description: 'Un clásico postre de bodegón. Flan acaramelado, suave y cremoso, coronado con tanto dulce de leche como crema chantilly.',
+			time: '1h 30m',
+			difficulty: 'Media',
+			ingredients: ['1L Leche', '8 Huevos', '200g Azúcar', 'Esencia Vainilla', 'Azúcar para caramelo', 'Dulce de Leche', 'Crema'],
+			steps: ['Acaramelar molde.', 'Mezclar huevos, leche y azúcar sin espumar.', 'Volcar en molde.', 'Hornear a baño maría.', 'Enfriar y servir mixto.']
+		},
+		en: {
+			title: 'Mixed Flan Custard',
+			description: 'A classic local dessert. Caramelized, soft and creamy custard, crowned with both dulce de leche and whipped cream.',
+			time: '1h 30m',
+			difficulty: 'Medium',
+			ingredients: ['1L Milk', '8 Eggs', '200g Sugar', 'Vanilla extract', 'Sugar for caramel', 'Dulce de Leche', 'Heavy cream'],
+			steps: ['Caramelize mold.', 'Mix eggs, milk and sugar without foaming.', 'Pour into mold.', 'Bake in water bath.', 'Chill and serve mixed.']
+		}
+	},
+	{
+		id: 'pastelitos',
+		image: '/pastelitos.png',
+		es: {
+			title: 'Pastelitos de Membrillo',
+			description: 'Masas hojaldradas fritas, crujientes por fuera y jugosas por dentro, rellenas de dulce de membrillo y bañadas en almíbar.',
+			time: '1h',
+			difficulty: 'Media',
+			ingredients: ['Masa de hojaldre para pastelitos', 'Dulce de membrillo', 'Aceite o Grasa para freír', 'Almíbar', 'Grageas'],
+			steps: ['Cortar dulce de membrillo.', 'Colocar en el centro del cuadrado de masa.', 'Cerrar en forma de estrella.', 'Freír en abundante grasa.', 'Bañar en almíbar.']
+		},
+		en: {
+			title: 'Quince Pastelitos',
+			description: 'Deep-fried puff pastries, crispy outside and juicy inside, filled with quince paste and glazed in light syrup.',
+			time: '1h',
+			difficulty: 'Medium',
+			ingredients: ['Puff pastry squares', 'Quince paste', 'Oil or beef fat for frying', 'Simple syrup', 'Sprinkles'],
+			steps: ['Cube quince paste.', 'Place in center of pastry.', 'Close in a star shape.', 'Deep fry.', 'Glaze with syrup.']
+		}
+	},
+	{
+		id: 'humita',
+		image: 'https://images.unsplash.com/photo-1626200419189-3b58eb14affc?auto=format&fit=crop&q=80&w=800',
+		es: {
+			title: 'Humita en Chala',
+			description: 'El sabor tradicional del norte. Una crema espesa de choclo, zapallo y albahaca, cocinada y envuelta en la propia chala del maíz.',
+			time: '2h',
+			difficulty: 'Alta',
+			ingredients: ['12 Choclos (maíz)', 'Zapallo criollo', 'Cebolla', 'Albahaca fresca', 'Pimentón y Ají', 'Queso cremoso'],
+			steps: ['Rallar o procesar el choclo.', 'Hacer un sofrito de cebolla.', 'Mezclar con choclo, zapallo y albahaca.', 'Colocar en chalas con un trozo de queso.', 'Hervir las humitas armadas.']
+		},
+		en: {
+			title: 'Steamed Humita',
+			description: 'The traditional northern flavor. A thick cream of corn, squash and basil, cooked and wrapped inside fresh corn husks.',
+			time: '2h',
+			difficulty: 'High',
+			ingredients: ['12 Ears of corn', 'Squash', 'Onion', 'Fresh basil', 'Paprika and chili', 'Cream cheese'],
+			steps: ['Grate or process corn.', 'Sauté chopped onion.', 'Mix with corn, squash and basil.', 'Wrap in husks with a piece of cheese.', 'Boil wrapped humitas.']
+		}
+	},
+	{
+		id: 'provoleta',
+		image: 'https://images.unsplash.com/photo-1605342417646-c22ae2492160?auto=format&fit=crop&q=80&w=800',
+		es: {
+			title: 'Provoleta Asada',
+			description: 'Una generosa rodaja de queso provolone asada a la parrilla o plancha, con una costra dorada por fuera y derretida en su interior.',
+			time: '15m',
+			difficulty: 'Baja',
+			ingredients: ['Rueda de queso Provolone hilado', 'Orégano', 'Ají molido', 'Aceite de oliva', 'Pan crujiente'],
+			steps: ['Orear el queso al aire por unas horas.', 'Calentar fuertemente la plancha o parrilla.', 'Dorar el queso 3 minutos de cada lado.', 'Espolvorear orégano.', 'Servir inmediatamente con pan.']
+		},
+		en: {
+			title: 'Grilled Provoleta',
+			description: 'A generous slice of provolone cheese grilled perfectly, boasting a golden crispy crust outside and melted core inside.',
+			time: '15m',
+			difficulty: 'Low',
+			ingredients: ['Round slice of Provolone cheese', 'Oregano', 'Red pepper flakes', 'Olive oil', 'Crusty bread'],
+			steps: ['Dry cheese slice in the air for hours.', 'Heat grill or pan intensely.', 'Sear cheese 3 mins on each side.', 'Sprinkle oregano.', 'Serve immediately with bread.']
+		}
 	}
 ];

@@ -1,24 +1,24 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import RecipeCard from '../components/RecipeCard.astro';
-import { recipes } from '../data/recipes';
+import Layout from '../../layouts/Layout.astro';
+import RecipeCard from '../../components/RecipeCard.astro';
+import { recipes } from '../../data/recipes';
 ---
 
-<Layout title="Sabor Argentino | Recetas Auténticas" lang="es">
+<Layout title="Argentine Flavor | Authentic Recipes" lang="en">
 	<main>
 		<header class="hero">
-			<h1>Sabor <span>Argentino</span></h1>
-			<p>Descubrí las mejores recetas tradicionales de nuestra tierra.</p>
+			<h1>Argentine <span>Flavor</span></h1>
+			<p>Discover the best traditional recipes from our land.</p>
 		</header>
 
 		<section class="recipes-grid">
 			{recipes.map(recipe => (
-				<RecipeCard recipe={recipe} lang="es" />
+				<RecipeCard recipe={recipe} lang="en" />
 			))}
 		</section>
 		
 		<footer class="footer">
-			<p>Hecho con ❤️ para los amantes de la buena comida</p>
+			<p>Made with ❤️ for good food lovers</p>
 		</footer>
 	</main>
 </Layout>
