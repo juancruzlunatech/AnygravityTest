@@ -6,7 +6,7 @@ Este proyecto contiene un script en bash diseñado para buscar archivos JavaScri
 
 - `find_todos.sh`: Script en bash que busca archivos `.js` con comentarios "todo" (sin distinguir mayúsculas de minúsculas) y añade su ubicación y número de línea en un archivo llamado `todos.txt` en el escritorio.
 
-## Uso
+## Usos
 
 1. Otorga permisos de ejecución al script:
    ```bash
