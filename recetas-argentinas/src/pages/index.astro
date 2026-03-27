@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import { recipes } from '../data/recipes';
+---
+
+<Layout title="Sabor Argentino | Recetas Auténticas">
+	<main>
+		<header class="hero">
+			<h1>Sabor <span>Argentino</span></h1>
+			<p>Descubrí las mejores recetas tradicionales de nuestra tierra.</p>
+		</header>
+
+		<section class="recipes-grid">
+			{recipes.map(recipe => (
+				<RecipeCard {...recipe} />
+			))}
+		</section>
+		
+		<footer class="footer">
+			<p>Hecho con ❤️ para los amantes de la buena comida</p>
+		</footer>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+
+	.hero {
+		text-align: center;
+		padding: 6rem 1rem 4rem;
+		animation: fadeIn 1s ease-out forwards;
+	}
+
+	h1 {
+		font-size: 4rem;
+		font-weight: 800;
+		color: #ffffff;
+		margin-bottom: 1rem;
+		letter-spacing: -1px;
+	}
+
+	h1 span {
+		color: var(--primary);
+	}
+
+	.hero p {
+		font-size: 1.25rem;
+		color: var(--text-muted);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.recipes-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2.5rem;
+		margin-top: 2rem;
+	}
+	
+	.footer {
+		text-align: center;
+		padding: 4rem 1rem;
+		margin-top: 2rem;
+		color: var(--text-muted);
+		font-size: 0.9rem;
+		border-top: 1px solid rgba(255,255,255,0.05);
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 3rem;
+		}
+		.hero {
+			padding: 4rem 1rem 2rem;
+		}
+	}
+</style>
